@@ -2,6 +2,16 @@
 
 // Desafio de Xadrez - MateCheck
 
+// criando uma função recursiva para a torre
+void moverTorre(int passoAtual, int totalPassos){
+    if(passoAtual > totalPassos){
+        return;
+    }
+    printf("Direita\n");
+    moverTorre(passoAtual + 1, totalPassos);
+}
+
+
 
 int main() {
 
@@ -11,10 +21,8 @@ int main() {
     int casasRainha = 8;
 
     printf("Movimento da torre\n");
-    // implementando uma estrutura de repetição para a movimentação de cinco casas a direita da torre
-    for(int i = 1;i <= casasTorre;i++){
-        printf("Direita\n");
-    }
+    // implementando uma estrutura de repetição utilizando conceitos de recursividade
+    moverTorre(1, casasTorre);
 
     printf("---------------------------------\n");
 

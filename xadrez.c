@@ -54,18 +54,27 @@ int main() {
 
     printf("--------------------------------------\n");
 
-    printf("Movimento do cavalo(em L para baixo e esquerda)\n");
-    // implementando uma estrutura de repetição(em L) do Cavalo
-    int numMovimentos =4;
-    int passosParaBaixo =3;
+    // implementando uma estrutura movendo o cavalo utilizando loops aninhados com múltiplas variáveis e(ou) condições
+    printf("Movimento do Cavalo (em L para cima e direita)\n");
+    int passosCima = 0;
+    int passosDireita = 0;
 
-    for(int i = 1; i <= numMovimentos;i++){
-        int j= 0;
-        while(j < passosParaBaixo){
-            printf("Baixo\n");
-            j++;
+    for (int i = 0; i < 3; i++) { // 3 tentativas de movimento, mas só 1 será válida
+        for (int j = 0; j < 3; j++) {
+            if (i == 2 && j == 1) {  // Movimento em L válido: 2 pra cima, 1 pra direita
+                while (passosCima < 2) {
+                    printf("Cima\n");
+                    passosCima++;
+                }
+                while (passosDireita < 1) {
+                    printf("Direita\n");
+                    passosDireita++;
+                }
+                break; // após o movimento em L, sai do loop
+            } else {
+                continue; // ignora combinações que não representam o L
+            }
         }
-        printf("Esquerda\n");
     }
 
     return 0;

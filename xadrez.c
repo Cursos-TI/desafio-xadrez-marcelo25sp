@@ -40,13 +40,13 @@ int main() {
 
     printf("Movimento do cavalo(em L para baixo e esquerda)\n");
     // implementando uma estrutura de repetição(em L) do Cavalo
-    int numMovimentos =3;
-    int passosParaBaixo =2;
+    int numMovimentos =4;
+    int passosParaBaixo =3;
 
     for(int i = 1; i <= numMovimentos;i++){
         int j= 0;
         while(j < passosParaBaixo){
-            printf("Baixo \n");
+            printf("Baixo\n");
             j++;
         }
         printf("Esquerda\n");

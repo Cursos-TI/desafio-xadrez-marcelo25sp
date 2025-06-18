@@ -11,7 +11,23 @@ void moverTorre(int passoAtual, int totalPassos){
     moverTorre(passoAtual + 1, totalPassos);
 }
 
+//criando uma função recursiva para o bispo
+void moverBispo(int passoAtual, int totalPassos) {
+    if (passoAtual > totalPassos) {
+        return;
+    }
+    printf("Cima Direita\n");
+    moverBispo(passoAtual + 1, totalPassos);
+}
 
+// criando uma função recursiva para a rainha
+void moverRainha(int passoAtual, int totalPassos) {
+    if (passoAtual > totalPassos) {
+        return;
+    }
+    printf("Esquerda\n");
+    moverRainha(passoAtual + 1, totalPassos);
+}
 
 int main() {
 
@@ -21,28 +37,20 @@ int main() {
     int casasRainha = 8;
 
     printf("Movimento da torre\n");
-    // implementando uma estrutura de repetição utilizando conceitos de recursividade
+    // implementando uma estrutura utilizando conceitos de recursividade para mover a torre
     moverTorre(1, casasTorre);
 
     printf("---------------------------------\n");
 
     printf("Movimento do bispo\n");
-    // implementando uma estrutura de repetição de cinco casas "cima direita" do bispo
-    int i=1;
-    while(i <= casasBispo){
-        printf("Cima Direita\n");
-        i++;
-    }
+    // implementando uma estrutura utilizando conceitos de recursividade para mover o bispo
+    moverBispo(1, casasBispo);
 
     printf("---------------------------------\n");
 
-    printf("Movimento da rainha\n");
-    // implementando uma estrutura de repetição de cinco casas "esquerda" da rainha
-    i = 1;
-    do{
-        printf("esquerda\n");
-        i++;
-    }while(i <= casasRainha);
+    //implementando uma estrutura utilizando conceitos de recursividade para mover a rainha
+    printf("Movimento da Rainha:\n");
+    moverRainha(1, casasRainha);
 
     printf("--------------------------------------\n");
 

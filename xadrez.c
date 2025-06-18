@@ -5,8 +5,10 @@
 
 int main() {
 
+    // variáveis que serão utilizadas nas estruturas de repetição
     int casasTorre = 5;
     int casasBispo = 5;
+    int casasRainha = 8;
 
     printf("Movimento da torre\n");
     // implementando uma estrutura de repetição para a movimentação de cinco casas a direita da torre
@@ -23,6 +25,16 @@ int main() {
         printf("Cima Direita\n");
         i++;
     }
+
+    printf("---------------------------------\n");
+
+    printf("Movimento da rainha\n");
+    // implementando uma estrutura de repetição de cinco casas "esquerda" da rainha
+    i = 1;
+    do{
+        printf("esquerda\n");
+        i++;
+    }while(i <= casasRainha);
 
     return 0;
 }

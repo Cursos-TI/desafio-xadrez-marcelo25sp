@@ -36,5 +36,21 @@ int main() {
         i++;
     }while(i <= casasRainha);
 
+    printf("--------------------------------------\n");
+
+    printf("Movimento do cavalo(em L para baixo e esquerda)\n");
+    // implementando uma estrutura de repetição(em L) do Cavalo
+    int numMovimentos =3;
+    int passosParaBaixo =2;
+
+    for(int i = 1; i <= numMovimentos;i++){
+        int j= 0;
+        while(j < passosParaBaixo){
+            printf("Baixo \n");
+            j++;
+        }
+        printf("Esquerda\n");
+    }
+
     return 0;
 }
